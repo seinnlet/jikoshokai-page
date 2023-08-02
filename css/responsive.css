@@ -1,0 +1,107 @@
+/* ----- Responsive ----- */
+
+@media (max-width: 1024px) {
+	
+	/* ----- General ----- */
+	h1 {
+		font-size: 3rem;
+	}
+	
+	/* ----- Header ----- */
+	.site-logo {
+		flex-grow: 1;
+	}
+	#toggle-menu + label {
+		display: block; 
+	}
+	#toggle-menu:checked ~ .nav-ul {
+		max-height: calc(100vh - 70px);
+		transition: all 500ms ease-in-out;
+	}
+	header nav ul {
+		max-height: 0px;
+		height: calc(100vh - 70px);
+		overflow: hidden;
+		position: absolute;
+		top: 70px;
+		line-height: auto;
+		right: 0;
+		width: 100%;
+		flex-direction: column;
+    justify-content: space-around;
+		background-color: #212427;
+		transition: all 500ms ease-in-out;
+	}
+  header nav ul li {
+    width: 100%;
+  }
+	header nav ul li a {
+		padding: 0;
+		color: #fcfcfc;
+		width: 100%;
+	}
+	header nav ul li a::before {
+		display: none;
+	}
+	
+	/* ----- Banner ----- */
+	#banner .banner-description {
+		width: 70%;
+	}
+	
+}
+
+@media (max-width: 768px) {
+	
+	/* ----- General ----- */
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	/* ----- Banner ----- */
+	#banner {
+		height: 520px;
+	}
+	#banner .container {
+		background-size: contain;
+	}
+	#banner .banner-description {
+		width: 100%;
+	}
+	#banner .scroll-wrap {
+		display: none;
+	}
+	
+}
+
+/* ----- Banner - height ----- */
+@media (max-height: 400px){
+	#banner {
+		height: 520px;
+	}
+}
+@media (min-height: 1080px){
+	#banner {
+		height: 1000px;
+	}
+}
+	
+/* ----- Large Screen ----- */
+@media (min-width: 1920px) {
+	
+	body {
+		font-size: 1.4rem;
+	}
+	h1 {
+		font-size: 6.8rem;
+	}
+	header {
+		height: 100px;
+	}
+	#banner .banner-intro, #banner .banner-description {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+	}
+	
+}
