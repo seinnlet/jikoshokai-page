@@ -6,6 +6,12 @@
 	h1 {
 		font-size: 3rem;
 	}
+	h2 {
+		margin-bottom: 50px;
+	}
+	section#about {
+		padding: 75px 0;
+	}
 	
 	/* ----- Header ----- */
 	.site-logo {
@@ -47,6 +53,14 @@
 	/* ----- Banner ----- */
 	#banner .banner-description {
 		width: 70%;
+	}
+	
+	/* ----- About ----- */
+	#about .image-wrap, #about .text-wrap {
+		width: 100%;
+	}
+	#about .text-wrap table {
+		padding-bottom: 0;
 	}
 	
 }

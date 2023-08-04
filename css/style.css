@@ -21,6 +21,19 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 4rem;							/* Checked School Laptop */
 }
+h2 {
+	font-size: 1.5rem;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	margin-bottom: 75px;
+}
+h2::after {
+	content: '';
+	border-top: 0.6px solid rgba(33, 36, 39, .3);
+	flex: 1 0 20px;
+	margin: 0 0 0 20px;
+}
 p, div, a {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 1rem;
@@ -29,8 +42,17 @@ a {
 	text-decoration: none;
 }
 p {
-	line-height: 22px;						/* Checked School Laptop */
+	line-height: 1.875rem;						/* Checked School Laptop */
 	color: #22262D;
+}
+section#about {
+	padding: 100px 0;
+}
+.japanese {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.small {
+	font-size: 0.875rem;
 }
 
 
@@ -168,7 +190,6 @@ header nav ul li:last-child a {
 }
 #banner .banner-description {
 	width: 45%;
-	line-height: 1.875rem;
 	padding: 8px 0;
 }
 #banner .banner-name {
@@ -231,3 +252,35 @@ header nav ul li:last-child a {
 	}
 }
 
+
+/* ----- About ----- */
+
+#about .container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+#about .image-wrap {
+	width: 50%;
+	text-align: center;
+}
+#about .image-wrap img {
+	width: 50%;
+	border-radius: 20px;
+}
+#about .text-wrap {
+	width: 50%;
+}
+#about .text-wrap p {
+	padding: 20px 0;
+}
+#about .text-wrap table {
+	width: 100%;
+	padding-bottom: 20px;
+}
+#about .text-wrap table th {
+	text-align: left;
+}
+#about .text-wrap .small {
+	padding-bottom: 10px;
+}
