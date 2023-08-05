@@ -91,6 +91,12 @@
 	#education .timeline-title {
 		font-size: 1.5rem;
 	}
+	#education .timeline-title, #education .timeline-subtitle, #education .timeline-explanation {
+		padding-left: 50px;
+	}
+	#education .timeline-explanation {
+		padding-bottom: 50px;
+	}
 	
 }
 

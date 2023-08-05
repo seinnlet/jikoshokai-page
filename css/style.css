@@ -307,16 +307,16 @@ header nav ul li:last-child a {
 #education .timeline-card::before {
 	content: '';
 	position: absolute;
-	left: 9px;
+	left: 8.5px;
 	top: 9px;
-	width: 2px;
+	width: 1px;
 	height: 100%;
-	background-color: #e2e2e2;
+	background-color: #efefef;
 }
 #education .timeline-title {
 	color: #efefef;
 	position: relative;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	font-size: 1.525rem;
 }
 #education .timeline-title::before {
@@ -325,23 +325,31 @@ header nav ul li:last-child a {
 	left: 0;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 20px;
-	height: 20px;
-	border-radius: 25px;
+	width: 17px;
+	height: 17px;
+	border-radius: 8.5px;
 	background-color: #e2e2e2;
-  transition: all .3s ease-in-out;
+  transition: background .3s ease-in-out;
 }
 #education .timeline-title, #education .timeline-subtitle, #education .timeline-explanation {
-	padding-left: 50px;
+	padding-left: 60px;
 }
 #education .timeline-subtitle {
 	color: #efefef;
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 	font-size: 1.1rem;
+  transition: color .3s ease-in-out;
+}
+#education .timeline-card:hover .timeline-title::before {
+	background-color: #C6F0FD;
+}
+#education .timeline-card:hover .timeline-subtitle {
+	color: #C6F0FD;
 }
 #education .timeline-explanation {
 	color: rgba(252, 252, 252, .3);
-	padding-bottom: 50px;
+	padding-bottom: 60px;
+	line-height: 1.875rem;	
 }
 #education .timeline-card:last-child .timeline-explanation {
 	padding-bottom: 0px;
