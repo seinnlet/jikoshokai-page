@@ -9,7 +9,7 @@
 	h2 {
 		margin-bottom: 50px;
 	}
-	section#about {
+	section#about, section#education {
 		padding: 75px 0;
 	}
 	
@@ -85,6 +85,11 @@
 	}
 	#banner .scroll-wrap {
 		display: none;
+	}
+	
+	/* ----- Education ----- */
+	#education .timeline-title {
+		font-size: 1.5rem;
 	}
 	
 }

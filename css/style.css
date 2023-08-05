@@ -16,10 +16,10 @@ html {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Outfit', sans-serif;
-	color: #212427;
 }
 h1 {
 	font-size: 4rem;							/* Checked School Laptop */
+	color: #212427;
 }
 h2 {
 	font-size: 1.5rem;
@@ -30,7 +30,6 @@ h2 {
 }
 h2::after {
 	content: '';
-	border-top: 0.6px solid rgba(33, 36, 39, .3);
 	flex: 1 0 20px;
 	margin: 0 0 0 20px;
 }
@@ -45,7 +44,7 @@ p {
 	line-height: 1.875rem;						/* Checked School Laptop */
 	color: #22262D;
 }
-section#about {
+section#about, section#education {
 	padding: 100px 0;
 }
 .japanese {
@@ -179,7 +178,7 @@ header nav ul li:last-child a {
 	align-items: flex-start;
 	flex-flow: column;
 	height: 100%;
-	background: url("../images/banner_background.svg") no-repeat left bottom;
+	background: url("../images/banner_background.svg") no-repeat fixed left bottom;
 	background-size: cover;
 }
 #banner .banner-intro, #banner .banner-name {
@@ -260,6 +259,12 @@ header nav ul li:last-child a {
 	flex-wrap: wrap;
 	align-items: center;
 }
+#about h2 {
+	color: #212427;
+}
+#about h2::after {
+	border-top: 0.6px solid rgba(33, 36, 39, .3);
+}
 #about .image-wrap {
 	width: 50%;
 	text-align: center;
@@ -283,4 +288,72 @@ header nav ul li:last-child a {
 }
 #about .text-wrap .small {
 	padding-bottom: 10px;
+}
+
+
+/* ----- Education ----- */
+#education {
+	background-color: #212427;
+}
+#education h2 {
+	color: #f1f1f1;
+}
+#education h2::after {
+	border-top: 0.6px solid rgba(252, 252, 252, .3);
+}
+#education .timeline-card {
+	position: relative;
+}
+#education .timeline-card::before {
+	content: '';
+	position: absolute;
+	left: 9px;
+	top: 9px;
+	width: 2px;
+	height: 100%;
+	background-color: #e2e2e2;
+}
+#education .timeline-title {
+	color: #efefef;
+	position: relative;
+	margin-bottom: 10px;
+	font-size: 1.525rem;
+}
+#education .timeline-title::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	border-radius: 25px;
+	background-color: #e2e2e2;
+  transition: all .3s ease-in-out;
+}
+#education .timeline-title, #education .timeline-subtitle, #education .timeline-explanation {
+	padding-left: 50px;
+}
+#education .timeline-subtitle {
+	color: #efefef;
+	margin-bottom: 25px;
+	font-size: 1.1rem;
+}
+#education .timeline-explanation {
+	color: rgba(252, 252, 252, .3);
+	padding-bottom: 50px;
+}
+#education .timeline-card:last-child .timeline-explanation {
+	padding-bottom: 0px;
+}
+#education .timeline-card:last-child .timeline-title::before {
+	animation: pulseAnimation 3s infinite;
+}
+@keyframes pulseAnimation {
+	0% {
+    box-shadow: 0 0 0 0px rgba(252, 252, 252, .3);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(252, 252, 252, .3);
+  }
 }
