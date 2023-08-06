@@ -44,7 +44,8 @@ p {
 	line-height: 1.875rem;						/* Checked School Laptop */
 	color: #22262D;
 }
-section#about, section#education, section#experiences {
+section#about, section#education, section#experiences, section#favourites {
+	overflow-x: hidden;
 	padding: 100px 0;
 }
 .japanese {
@@ -457,5 +458,3 @@ header nav ul li:last-child a {
 	order: 5;
 	padding-left: 30px;
 }
-
-

@@ -10,3 +10,9 @@ while(i--)	// because getElementsByClassName returns array
 function removeChecked() {
 	document.getElementById("toggle-menu").checked = false;
 }
+
+// animation
+AOS.init({
+	duration: 1200,
+	once: true,
+});

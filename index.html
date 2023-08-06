@@ -13,6 +13,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Outfit:wght@700;800&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"/>
 	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css"/>
 	<link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 	
@@ -38,7 +39,7 @@
 					<li><a href="#about" class="nav-item">About</a></li>
 					<li><a href="#education" class="nav-item">Education</a></li>
 					<li><a href="#experiences" class="nav-item">Experiences</a></li>
-					<li><a href="#favourite" class="nav-item">Favourites</a></li>
+					<li><a href="#favourites" class="nav-item">Favourites</a></li>
 				</ul>
 				
 			</div>
@@ -52,9 +53,9 @@
 		<!-- banner -->
 		<section id="banner">
 			<div class="container">
-				<p class="banner-intro">Hello! My name is</p>
-				<h1 class="banner-name">Seinn Let Let Hninn</h1>
-				<p class="banner-description">I'm a web development enthusiast, studying Crossmedia Informatics at Yomiuri Institute of Technology &amp; Welfare in Japan.</p>
+				<p class="banner-intro" data-aos="fade-right">Hello! My name is</p>
+				<h1 class="banner-name" data-aos="fade-right" data-aos-delay="100">Seinn Let Let Hninn</h1>
+				<p class="banner-description" data-aos="fade-right" data-aos-delay="200">I'm a web development enthusiast, studying Crossmedia Informatics at Yomiuri Institute of Technology &amp; Welfare in Japan.</p>
 				
 				<a href="#about" class="scroll-wrap">
 					<div class="scroll-text">Scroll</div>
@@ -67,12 +68,12 @@
 		<section id="about">
 			<div class="container">
 				<h2>About Me</h2>
-				<div class="image-wrap">
+				<div class="image-wrap" data-aos="zoom-in">
 					<img src="images/about-me-image-1.jpg" alt="Photo at Enoshima"/>
 				</div>
 				<div class="text-wrap">
-					<p>My dream is to become a Front-End Developer, especially for developing creative web and mobile applications.<br/><span class="japanese" lang="ja">将来の夢はフロントエンドディベロッパーを目指しており、人に役に立つ色々なアプリを作っていきたいです。</span></p>
-					<table>
+					<p data-aos="fade-left">My dream is to become a Front-End Developer, especially for developing creative web and mobile applications.<br/><span class="japanese" lang="ja">将来の夢はフロントエンドディベロッパーを目指しており、人に役に立つ色々なアプリを作っていきたいです。</span></p>
+					<table data-aos="fade-left" data-aos-delay="100">
 						<tr>
 							<th>Date of Birth:</th>
 							<td colspan="2">October, 2000</td>
@@ -107,7 +108,7 @@
 				
 				<h2>Education</h2>
 				
-				<div class="timeline-card">
+				<div class="timeline-card" data-aos="fade-up">
 					<h3 class="timeline-title">2017 - 2020 | NCC Education + University of Greenwich (Local Campus: KMD Institute)</h3>
 					<div class="timeline-subtitle">B.Sc Business Information Techonlogy</div>
 					<div class="timeline-explanation">
@@ -115,7 +116,7 @@
 					</div>
 				</div>
 				
-				<div class="timeline-card">
+				<div class="timeline-card" data-aos="fade-up">
 					<h3 class="timeline-title">2022 - 2023 | Bunka Institute of Language</h3>
 					<div class="timeline-subtitle">Japanese Studies</div>
 					<div class="timeline-explanation">
@@ -123,7 +124,7 @@
 					</div>
 				</div>
 				
-				<div class="timeline-card">
+				<div class="timeline-card" data-aos="fade-up">
 					<h3 class="timeline-title">2023 - Present | Yomiuri Institute of Technology &amp; Welfare</h3>
 					<div class="timeline-subtitle">Cross-Media Informatics </div>
 					<div class="timeline-explanation">
@@ -139,7 +140,7 @@
 			<div class="container">
 				<h2 class="order-1">Experiences</h2>
 				
-				<div class="text-wrap order-2">
+				<div class="text-wrap order-2" data-aos="fade-right">
 					<h3>Website Manager (Volunteer)</h3>
 					<div class="text-place-time">
 						ASEAN Youth Organization | Aug 2021 - Jan 2022
@@ -159,7 +160,7 @@
 					</a>
 				</div>
 				
-				<div class="text-wrap order-5">
+				<div class="text-wrap order-5" data-aos="fade-left">
 					<h3>WordPress Developer Intern</h3>
 					<div class="text-place-time">
 						CreativeAdventure Co., Ltd | Nov 2021 - Mar 2022
@@ -191,6 +192,7 @@
 	</footer>
 	
 	<!-- javascript	-->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	
 </body>
