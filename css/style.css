@@ -53,6 +53,12 @@ section#about, section#education, section#experiences {
 .small {
 	font-size: 0.875rem;
 }
+.text-link {
+	color: #3C6E7D;
+}
+.text-link:hover {
+	opacity: 0.7;
+}
 
 
 /* ----- Header ----- */
