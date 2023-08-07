@@ -7,7 +7,7 @@
 		font-size: 3rem;
 	}
 	h2 {
-		margin-bottom: 50px;
+		margin-bottom: 60px;
 	}
 	section#about, section#education, section#experiences {
 		padding: 75px 0;
@@ -43,7 +43,7 @@
   }
 	header nav ul li a {
 		padding: 0;
-		color: #fcfcfc;
+		color: #f1f1f1;
 		width: 100%;
 	}
 	header nav ul li a::before {
@@ -59,15 +59,12 @@
 	#about .image-wrap, #about .text-wrap {
 		width: 100%;
 	}
-	#about .text-wrap table {
-		padding-bottom: 0;
+	#about .image-wrap {
+		margin-bottom: 30px;
 	}
 	
 	/* ----- Experiences ----- */
-	#experiences h2 {
-		margin-bottom: 0;
-	}
-	#experiences .container {
+	#experiences .card-wrap {
 		row-gap: 50px;
 	}
 	#experiences .text-wrap, #experiences .image-wrap {
@@ -76,14 +73,14 @@
 	#experiences .image-wrap img {
 		width: 75%;
 	}
-	#experiences .order-4 {
-		order: 5;
-	}
-	#experiences .order-5 {
+	#experiences .order-3 {
 		order: 4;
+	}
+	#experiences .order-4 {
+		order: 3;
 		padding-left: 0;
 	}
-	#experiences .text-wrap .text-explanation {
+	#experiences .text-wrap .explanation {
 		width: 100%;
 		margin-bottom: 0;
 	}
@@ -96,6 +93,9 @@
 	.container {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+	h3 {
+		font-size: 1.5rem;
 	}
 	
 	/* ----- Banner ----- */
@@ -113,13 +113,10 @@
 	}
 	
 	/* ----- Education ----- */
-	#education .timeline-title {
-		font-size: 1.5rem;
-	}
-	#education .timeline-title, #education .timeline-subtitle, #education .timeline-explanation {
+	#education .timeline-title, #education .timeline-subtitle, #education .explanation {
 		padding-left: 50px;
 	}
-	#education .timeline-explanation {
+	#education .explanation {
 		padding-bottom: 50px;
 	}
 	

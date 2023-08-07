@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	font-size: 4rem;							/* Checked School Laptop */
-	color: #212427;
 }
 h2 {
 	font-size: 1.5rem;
@@ -33,6 +32,20 @@ h2::after {
 	flex: 1 0 20px;
 	margin: 0 0 0 20px;
 }
+h2.primary-dark::after {
+	border-top: 0.6px solid rgba(33, 36, 39, .3);
+}
+h2.primary-light::after {
+	border-top: 0.6px solid rgba(252, 252, 252, .3);
+}
+h3 {
+	font-size: 1.525rem;
+	margin-bottom: 15px;
+}
+h4 {
+	font-size: 1.3rem;
+	margin-bottom: 15px;
+}
 p, div, a {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 1rem;
@@ -40,12 +53,11 @@ p, div, a {
 a {
 	text-decoration: none;
 }
-p {
+p, .explanation {
 	line-height: 1.875rem;						/* Checked School Laptop */
-	color: #22262D;
 }
 section#about, section#education, section#experiences, section#favourites {
-	overflow-x: hidden;
+	overflow: hidden;
 	padding: 100px 0;
 }
 .japanese {
@@ -54,12 +66,17 @@ section#about, section#education, section#experiences, section#favourites {
 .small {
 	font-size: 0.875rem;
 }
-.text-link {
-	color: #3C6E7D;
-}
-.text-link:hover {
-	opacity: 0.7;
-}
+/* ----- Color ----- */
+.primary-dark { color: #212427; }
+.secondary-dark { color: #233140; }
+.primary-light { color: #f1f1f1; }
+.secondary-light { color: #efefef; }
+.transparent-dark { color: rgba(33, 36, 39, .3); }
+.transparent-light { color: rgba(252, 252, 252, .3); }
+.background-dark { background-color: #212427; }
+.background-light { background-color: #fff; }
+.text-link { color: #3C6E7D; }
+.text-link:hover { 	opacity: 0.7; }
 
 
 /* ----- Header ----- */
@@ -68,7 +85,6 @@ header {
 	top: 0;
 	width: 100%;
 	height: 70px;									/* Checked School Laptop */
-	background-color: #fff;
 	border-bottom: 1px solid rgba(33, 36, 39, .3);
 	z-index: 999;
 }
@@ -118,7 +134,6 @@ header nav ul li:last-child a {
 .site-logo a {
 	font-size: 1.4rem;
 	font-weight: 700;
-	color: #212427;
 }
 /* ----- Header - Mobile Toggle Menu ----- */
 #toggle-menu {
@@ -157,7 +172,7 @@ header nav ul li:last-child a {
 	background-color: #212427;
 }
 #toggle-menu:checked + label span {
-	background-color: #fcfcfc;
+	background-color: #efefef;
 }
 /* Transform the bars into an 'X' */
 #toggle-menu:checked + label span:nth-child(1) {
@@ -189,14 +204,13 @@ header nav ul li:last-child a {
 	background-size: cover;
 }
 #banner .banner-intro, #banner .banner-name {
-	padding: 8px 0;
+	margin-bottom: 15px;
 }
 #banner .banner-intro {
 	font-size: 1.25rem;
 }
 #banner .banner-description {
 	width: 45%;
-	padding: 8px 0;
 }
 #banner .banner-name {
 	position: relative;
@@ -266,12 +280,6 @@ header nav ul li:last-child a {
 	flex-wrap: wrap;
 	align-items: center;
 }
-#about h2 {
-	color: #212427;
-}
-#about h2::after {
-	border-top: 0.6px solid rgba(33, 36, 39, .3);
-}
 #about .image-wrap {
 	width: 50%;
 	text-align: center;
@@ -284,33 +292,25 @@ header nav ul li:last-child a {
 	width: 50%;
 }
 #about .text-wrap p {
-	padding: 20px 0;
+	margin-bottom: 30px;
 }
 #about .text-wrap table {
 	width: 100%;
-	padding-bottom: 20px;
 }
 #about .text-wrap table th {
 	text-align: left;
+	color:  #212427;
 }
 #about .text-wrap table td {
 	vertical-align: top;
+	color: #233140;
 }
 #about .text-wrap .small {
-	padding-bottom: 10px;
+	padding-bottom: 10px;							/* Checked School Laptop */
 }
 
 
 /* ----- Education ----- */
-#education {
-	background-color: #212427;
-}
-#education h2 {
-	color: #f1f1f1;
-}
-#education h2::after {
-	border-top: 0.6px solid rgba(252, 252, 252, .3);
-}
 #education .timeline-card {
 	position: relative;
 }
@@ -324,10 +324,8 @@ header nav ul li:last-child a {
 	background-color: #efefef;
 }
 #education .timeline-title {
-	color: #efefef;
+	color: #f1f1f1;
 	position: relative;
-	margin-bottom: 15px;
-	font-size: 1.525rem;
 }
 #education .timeline-title::before {
 	content: '';
@@ -338,10 +336,10 @@ header nav ul li:last-child a {
 	width: 17px;
 	height: 17px;
 	border-radius: 8.5px;
-	background-color: #e2e2e2;
+	background-color: #efefef;
   transition: background .3s ease-in-out;
 }
-#education .timeline-title, #education .timeline-subtitle, #education .timeline-explanation {
+#education .timeline-title, #education .timeline-subtitle, #education .explanation {
 	padding-left: 60px;
 }
 #education .timeline-subtitle {
@@ -356,36 +354,25 @@ header nav ul li:last-child a {
 #education .timeline-card:hover .timeline-subtitle {
 	color: #C6F0FD;
 }
-#education .timeline-explanation {
+#education .explanation {
 	color: rgba(252, 252, 252, .3);
 	padding-bottom: 60px;
 	line-height: 1.875rem;	
 }
-#education .timeline-card:last-child .timeline-explanation {
+#education .timeline-card:last-child .explanation {
 	padding-bottom: 0px;
 }
 #education .timeline-card:last-child .timeline-title::before {
 	animation: pulseAnimation 3s infinite;
 }
 @keyframes pulseAnimation {
-	0% {
-    box-shadow: 0 0 0 0px rgba(252, 252, 252, .3);
-  }
-  100% {
-    box-shadow: 0 0 0 10px rgba(252, 252, 252, .3);
-  }
+	0% { box-shadow: 0 0 0 0px rgba(252, 252, 252, .3); }
+  100% { box-shadow: 0 0 0 10px rgba(252, 252, 252, .3); }
 }
 
 
 /* ----- Experiences ----- */
-#experiences h2 {
-	color: #212427;
-	margin-bottom: 15px;
-}
-#experiences h2::after {
-	border-top: 0.6px solid rgba(33, 36, 39, .3);
-}
-#experiences .container {
+#experiences .card-wrap {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -394,22 +381,16 @@ header nav ul li:last-child a {
 #experiences .text-wrap, #experiences .image-wrap {
 	width: 50%;
 }
-#experiences .text-wrap h3 {
-	font-size: 1.3rem;
-	margin-bottom: 15px;
-	color: #212427;
-}
 #experiences .text-wrap .text-place-time {
 	font-size: 1.1rem;
 	margin-bottom: 30px;
 	font-weight: 500;
 }
-#experiences .text-wrap .text-explanation {
-	line-height: 1.875rem;	
+#experiences .text-wrap .explanation {
 	width: 75%;
 	margin-bottom: 30px;
 }
-#experiences .text-wrap .text-explanation ul {
+#experiences .text-wrap .explanation ul {
 	padding-left: 20px;
 }
 #experiences .image-wrap {
@@ -425,7 +406,6 @@ header nav ul li:last-child a {
 	left: 0;
 	bottom: 20%;
 	padding: 15px 30px;
-	color: #212427;
 	border-radius: 10px;
 	background: rgba( 252, 252, 252, 0.3);
 	border: 1px solid rgba( 255, 255, 255, 0.3);
@@ -442,6 +422,7 @@ header nav ul li:last-child a {
 }
 #experiences .image-wrap:hover .image-title {
 	transform: translateY(5px);
+	box-shadow: 0 3px 10px 10px rgba(198, 240, 253, .3);
 }
 #experiences .order-1 {
 	order: 1;
@@ -454,23 +435,11 @@ header nav ul li:last-child a {
 }
 #experiences .order-4 {
 	order: 4;
-}
-#experiences .order-5 {
-	order: 5;
 	padding-left: 30px;
 }
 
 
 /* ----- Favourites ----- */
-#favourites {
-	background-color: #212427;
-}
-#favourites h2 {
-	color: #f1f1f1;
-}
-#favourites h2::after {
-	border-top: 0.6px solid rgba(252, 252, 252, .3);
-}
 #favourites .gallery-wrap {
 	display: flex;
 	flex-wrap: wrap;
@@ -480,18 +449,11 @@ header nav ul li:last-child a {
 #favourites .text-left-wrap {
 	width: 40%;
 }
-#favourites .text-left-wrap h3 {
-	color: #efefef;
-	margin-bottom: 15px;
-	font-size: 1.525rem;
-}
 #favourites .text-left-wrap h3 span {
 	width: 30px;
 	display: inline-block;
 }
-#favourites .text-left-wrap .text-explanation {
-	color: rgba(252, 252, 252, .3);
-	font-size: 1.1rem;
+#favourites .text-left-wrap .explanation, #favourites .text-right-wrap .explanation {
 	margin-left: 30px;
 }
 #favourites .image-right-wrap-3, #favourites .image-right-wrap-1 {
@@ -529,17 +491,9 @@ header nav ul li:last-child a {
 	flex-direction: column;
 	justify-content: center;
 }
-#favourites .text-right-wrap h3 {
-	color: #212427;
-	margin-bottom: 15px;
-	font-size: 1.525rem;
-}
 #favourites .text-right-wrap h3 span {
 	width: 30px;
 	display: inline-block;
 }
-#favourites .text-right-wrap .text-explanation {
-	color: rgba(33, 36, 39, .3);
-	font-size: 1.1rem;
-	margin-left: 30px;
-}
+
+
