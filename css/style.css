@@ -593,10 +593,10 @@ header nav ul li:last-child a {
 	25% { opacity: 0; transform: scale(1.1); }
 	100% { opacity: 0 }
 }
-	@keyframes titleAnimation { 
-		0% { opacity: 0; }
-		8% { opacity: 1; }
-		17% { opacity: 1; }
-		19% { opacity: 0 }
-		100% { opacity: 0 }
-	}
+@keyframes titleAnimation { 
+	0% { opacity: 0; }
+	8% { opacity: 1; }
+	17% { opacity: 1; }
+	19% { opacity: 0 }
+	100% { opacity: 0 }
+}
