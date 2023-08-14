@@ -13,6 +13,10 @@
 		padding: 75px 0;
 	}
 	
+	/* ----- Order ----- */
+	.order-3 { order: 4; }
+	.order-4 { order: 3; }
+	
 	/* ----- Header ----- */
 	.site-logo {
 		flex-grow: 1;
@@ -73,16 +77,39 @@
 	#experiences .image-wrap img {
 		width: 75%;
 	}
-	#experiences .order-3 {
-		order: 4;
-	}
 	#experiences .order-4 {
-		order: 3;
 		padding-left: 0;
 	}
 	#experiences .text-wrap .explanation {
 		width: 100%;
 		margin-bottom: 0;
+	}
+	
+	/* ----- Favourites ----- */
+	#favourites .gallery-wrap {
+		row-gap: 50px;
+	}
+	#favourites .text-left-wrap, #favourites .text-right-wrap, 
+	#favourites .image-right-wrap-3, #favourites .image-left, #favourites .slideshow {
+		width: 100%;
+	}
+	#favourites .image-right-wrap-3, #favourites .image-left {
+		margin-bottom: 15px;
+	}
+	#favourites .text-right-wrap {
+		margin-left: 0;
+		height: auto;
+    padding-left: 0;
+		display: block;
+		background: none;
+    border: none;
+    border-radius: unset;
+	}
+	#favourites .text-right-wrap h3 {
+		color: #f1f1f1;
+	}
+	#favourites .text-right-wrap .explanation {
+		color: rgba(252, 252, 252, .3);
 	}
 	
 }
@@ -127,6 +154,10 @@
 		font-size: 1.6rem;
 	}
 	
+	/* ----- Favourites ----- */	
+	#favourites .image-left, #favourites .slideshow {
+		height: 250px;
+	}
 }
 
 /* ----- Banner - height ----- */

@@ -25,7 +25,7 @@ h2 {
 	display: flex;
 	width: 100%;
 	align-items: center;
-	margin-bottom: 75px;
+	margin-bottom: 80px;
 }
 h2::after {
 	content: '';
@@ -78,6 +78,13 @@ section#about, section#education, section#experiences, section#favourites {
 .text-link { color: #3C6E7D; }
 .text-link:hover { 	opacity: 0.7; }
 
+/* ----- Order ----- */
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+.order-3 { order: 3; }
+.order-4 { order: 4; }
+.order-5 { order: 5; }
+.order-6 { order: 6; }
 
 /* ----- Header ----- */
 header {
@@ -86,7 +93,7 @@ header {
 	width: 100%;
 	height: 70px;									/* Checked School Laptop */
 	border-bottom: 1px solid rgba(33, 36, 39, .3);
-	z-index: 999;
+	z-index: 9999;
 }
 header nav {
 	width: 100%;
@@ -424,17 +431,7 @@ header nav ul li:last-child a {
 	transform: translateY(5px);
 	box-shadow: 0 3px 10px 10px rgba(198, 240, 253, .3);
 }
-#experiences .order-1 {
-	order: 1;
-}
-#experiences .order-2 {
-	order: 2;
-}
-#experiences .order-3 {
-	order: 3;
-}
 #experiences .order-4 {
-	order: 4;
 	padding-left: 30px;
 }
 
@@ -444,56 +441,162 @@ header nav ul li:last-child a {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	row-gap: 100px;
+	row-gap: 120px;
 }
 #favourites .text-left-wrap {
 	width: 40%;
+	padding-right: 30px;
 }
-#favourites .text-left-wrap h3 span {
+#favourites .text-left-wrap h3 span, #favourites .text-right-wrap h3 span {
 	width: 30px;
 	display: inline-block;
 }
 #favourites .text-left-wrap .explanation, #favourites .text-right-wrap .explanation {
 	margin-left: 30px;
 }
-#favourites .image-right-wrap-3, #favourites .image-right-wrap-1 {
-	width: 60%;
-	display: flex;
-	flex-wrap: wrap;
-}
-#favourites .image-right-wrap-3 {
-	height: 150px;
-	column-gap: 30px;	
-}
-#favourites .image-right-wrap-1 {
-	height: 300px;
-}
-#favourites .image-right-wrap-3 .image {
-	background: #fff;
-	flex-grow: 1;
-}
-#favourites .image-right-wrap-1 .full-image {
-	background: #fff;
-	width: 100%;
-}
-#favourites .image-left-wrap {
-	width: 50%;
-	background: #222;
-	height: 300px;
-}
 #favourites .text-right-wrap {
 	width: 60%;
 	margin-left: -10%;
 	height: 180px;
 	padding-left: 30px;
-	background: #fff;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	background: rgba( 252, 252, 252, 0.5);
+	backdrop-filter: blur(6px);
+	border: 1px solid rgba( 255, 255, 255, 0.5);
+	border-radius: 10px;
 }
-#favourites .text-right-wrap h3 span {
-	width: 30px;
-	display: inline-block;
+#favourites .text-right-wrap h3 {
+	color: #212427;
 }
-
-
+#favourites .text-right-wrap .explanation {
+	color: rgba(33, 36, 39, .7);
+}
+#favourites .image-right-wrap-3, #favourites .slideshow {
+	width: 60%;
+}
+#favourites .image-right-wrap-3 {
+	display: flex;
+	flex-wrap: wrap;
+	height: 150px;
+	column-gap: 30px;	
+}
+#favourites .image-right-wrap-3 .image {
+	flex-grow: 1;
+	border-radius: 10px;
+	transition: transform .3s ease-in-out;
+}
+#favourites .image-right-wrap-3 .image:hover {
+	transform: translateY(-5px);
+}
+#favourites .image-right-wrap-3 .image:nth-child(1) {
+	background: linear-gradient(rgba(33, 36, 39, .1), rgba(33, 36, 39, .4)), url("../images/favourites-sushi-1.jpg") no-repeat center;
+	background-size: cover;
+}
+#favourites .image-right-wrap-3 .image:nth-child(2) {
+	background: linear-gradient(rgba(33, 36, 39, .1), rgba(33, 36, 39, .4)), url("../images/favourites-sushi-2.jpg") no-repeat center;
+	background-size: cover;
+}
+#favourites .image-right-wrap-3 .image:nth-child(3) {
+	background: linear-gradient(rgba(33, 36, 39, .1), rgba(33, 36, 39, .4)), url("../images/favourites-sushi-3.jpg") no-repeat center;
+	background-size: cover;
+}
+#favourites .image-left {
+	width: 50%;
+	height: 300px;
+	background: linear-gradient(rgba(33, 36, 39, .1), rgba(33, 36, 39, .4)), url("../images/favourites-japanese.jpg") no-repeat center;
+	background-size: cover;
+	border-radius: 10px;
+}
+#favourites .slideshow {
+	height: 300px;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+#favourites .slideshow .image {
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	-webkit-animation: imageAnimation 42s linear infinite 0s;
+	-moz-animation: imageAnimation 42s linear infinite 0s;
+	animation: imageAnimation 42s linear infinite 0s;
+}
+#favourites .slideshow .title {
+	z-index: 1000;
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+	opacity: 0;
+	-webkit-animation: titleAnimation 42s linear infinite 0s;
+	-moz-animation: titleAnimation 42s linear infinite 0s;
+	animation: titleAnimation 42s linear infinite 0s;
+}
+#favourites .slide:nth-child(1) .image {
+	background-image: linear-gradient(rgba(33, 36, 39, .05), rgba(33, 36, 39, .4)), url("../images/favourites-explore-1.jpg");
+}
+#favourites .slide:nth-child(2) .image {
+	background-image: linear-gradient(rgba(33, 36, 39, .05), rgba(33, 36, 39, .4)), url("../images/favourites-explore-2.jpg");
+}
+#favourites .slide:nth-child(3) .image {
+	background-image: linear-gradient(rgba(33, 36, 39, .05), rgba(33, 36, 39, .4)), url("../images/favourites-explore-3.jpg");
+}
+#favourites .slide:nth-child(4) .image {
+	background-image: linear-gradient(rgba(33, 36, 39, .05), rgba(33, 36, 39, .4)), url("../images/favourites-explore-4.jpg");
+}
+#favourites .slide:nth-child(5) .image {
+	background-image: linear-gradient(rgba(33, 36, 39, .05), rgba(33, 36, 39, .4)), url("../images/favourites-explore-5.jpg");
+}
+#favourites .slide:nth-child(6) .image {
+	background-image: linear-gradient(rgba(33, 36, 39, .05), rgba(33, 36, 39, .4)), url("../images/favourites-explore-6.jpg");
+}
+#favourites .slide:nth-child(7) .image {
+	background-image: linear-gradient(rgba(33, 36, 39, .05), rgba(33, 36, 39, .4)), url("../images/favourites-explore-7.jpg");
+}
+#favourites .slide:nth-child(2) .image, #favourites .slide:nth-child(2) .title {
+	animation-delay: 6s;
+}
+#favourites .slide:nth-child(3) .image, #favourites .slide:nth-child(3) .title {
+	animation-delay: 12s;
+}
+#favourites .slide:nth-child(4) .image, #favourites .slide:nth-child(4) .title {
+	animation-delay: 18s;
+}
+#favourites .slide:nth-child(5) .image, #favourites .slide:nth-child(5) .title {
+	animation-delay: 24s;
+}
+#favourites .slide:nth-child(6) .image, #favourites .slide:nth-child(6) .title {
+	animation-delay: 30s;
+}
+#favourites .slide:nth-child(7) .image, #favourites .slide:nth-child(7) .title {
+	animation-delay: 36s;
+}
+@keyframes imageAnimation { 
+	0% {
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	8% {
+		opacity: 1;
+		transform: scale(1.05);
+		animation-timing-function: ease-out;
+	}
+	17% { opacity: 1; transform: scale(1.1); }
+	25% { opacity: 0; transform: scale(1.1); }
+	100% { opacity: 0 }
+}
+	@keyframes titleAnimation { 
+		0% { opacity: 0; }
+		8% { opacity: 1; }
+		17% { opacity: 1; }
+		19% { opacity: 0 }
+		100% { opacity: 0 }
+	}
