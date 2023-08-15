@@ -11,6 +11,39 @@ function removeChecked() {
 	document.getElementById("toggle-menu").checked = false;
 }
 
+
+// to add navigation active, inspired from https://codepen.io/dbilanoski/pen/LabpzG
+// Get all sections that have an ID defined
+const sections = document.querySelectorAll("section[id]");
+
+// Add an event listener listening for scroll
+window.addEventListener("scroll", navHighlighter);
+
+function navHighlighter() {
+  
+  // Get current scroll position
+  let scrollY = window.pageYOffset;
+  
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
+    
+  if(sectionId != "banner"){
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector("nav a[href*=" + sectionId + "]").classList.add("active");
+    } else {
+      document.querySelector("nav a[href*=" + sectionId + "]").classList.remove("active");
+    }
+   }
+      
+  });
+
+}
+
+
+
 // animation
 AOS.init({
 	duration: 1200,
