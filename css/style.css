@@ -302,17 +302,21 @@ header nav ul li:last-child a {
 }
 #about .text-wrap table {
 	width: 100%;
+  line-height: 1.325rem;
 }
 #about .text-wrap table th {
 	text-align: left;
 	color:  #212427;
+  padding-bottom: 10px;
 }
 #about .text-wrap table td {
 	vertical-align: top;
 	color: #233140;
+  padding-bottom: 10px;
 }
-#about .text-wrap .small {
-	padding-bottom: 10px;
+#about .text-wrap table .small {
+	font-weight: 400;
+  color: #233140;
 }
 
 
