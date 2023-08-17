@@ -633,7 +633,7 @@ footer .copyright {
 
 /* ----- Responsive ----- */
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 	
 	/* ----- General ----- */
 	h1 {
@@ -751,7 +751,7 @@ footer .copyright {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	
 	/* ----- General ----- */
 	.container {
@@ -807,7 +807,7 @@ footer .copyright {
 }
 
 /* ----- Navigation / Banner - height ----- */
-@media (max-height: 400px){
+@media screen and (max-height: 400px){
 	#banner {
 		height: 520px;
 	}
@@ -819,14 +819,14 @@ footer .copyright {
    display: none;   
   }
 }
-@media (min-height: 1080px){
+@media screen and (min-height: 1080px){
 	#banner {
 		height: 1000px;
 	}
 }
 	
 /* ----- Large Screen ----- */
-@media (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
   
   /* ----- General ----- */
 	.container { padding: 0px 70px; }
