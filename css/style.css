@@ -75,8 +75,8 @@ section#about, section#education, section#experiences, section#favourites {
 .transparent-light { color: rgba(252, 252, 252, .3); }
 .background-dark { background-color: #212427; }
 .background-light { background-color: #fff; }
-.text-link { color: #3C6E7D; }
-.text-link:hover { 	opacity: 0.7; }
+.text-link { color: #3C6E7D; border-bottom: 1px solid transparent; transition: all .3s ease-out; }
+.text-link:hover { 	opacity: 0.7; border-color: #3C6E7D; }
 
 /* ----- Order ----- */
 .order-1 { order: 1; }
@@ -314,7 +314,7 @@ header nav ul li:last-child a {
 	color: #233140;
   padding-bottom: 10px;
 }
-#about .text-wrap table .small {
+#about .text-wrap table span {
 	font-weight: 400;
   color: #233140;
 }
