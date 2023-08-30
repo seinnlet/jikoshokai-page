@@ -54,7 +54,7 @@ a {
 	text-decoration: none;
 }
 p, .explanation {
-	line-height: 1.875rem;
+	line-height: 1.875;
 }
 section#about, section#education, section#experiences, section#favourites {
 	overflow: hidden;
@@ -302,7 +302,7 @@ header nav ul li:last-child a {
 }
 #about .text-wrap table {
 	width: 100%;
-  line-height: 1.325rem;
+  line-height: 1.5;
 }
 #about .text-wrap table th {
 	text-align: left;
@@ -839,7 +839,7 @@ footer .copyright {
   h3 { font-size: 1.7rem; margin-bottom: 20px; }
   h4 { font-size: 1.5rem; margin-bottom: 20px; }
   p, div, a { font-size: 1.125rem; }
-  p, .explanation { line-height: 2.125rem; }
+  p, .explanation { line-height: 2.125; }
   .small { font-size: 0.9375rem; }
   section#about, section#education, section#experiences, section#favourites {
     padding: 125px 0;
