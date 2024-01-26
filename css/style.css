@@ -529,9 +529,9 @@ header nav ul li:last-child a {
 	background-position: center;
 	background-repeat: no-repeat;
 	opacity: 0;
-	-webkit-animation: imageAnimation 42s linear infinite 0s;
-	-moz-animation: imageAnimation 42s linear infinite 0s;
-	animation: imageAnimation 42s linear infinite 0s;
+	-webkit-animation: imageAnimation 40s linear infinite 0s;
+	-moz-animation: imageAnimation 40s linear infinite 0s;
+	animation: imageAnimation 40s linear infinite 0s;
 }
 #favourites .slideshow .title {
 	z-index: 1000;
@@ -539,9 +539,9 @@ header nav ul li:last-child a {
 	bottom: 25px;
 	right: 25px;
 	opacity: 0;
-	-webkit-animation: titleAnimation 42s linear infinite 0s;
-	-moz-animation: titleAnimation 42s linear infinite 0s;
-	animation: titleAnimation 42s linear infinite 0s;
+	-webkit-animation: titleAnimation 40s linear infinite 0s;
+	-moz-animation: titleAnimation 40s linear infinite 0s;
+	animation: titleAnimation 40s linear infinite 0s;
 }
 #favourites .slide:nth-child(1) .image {
 	background-image: linear-gradient(rgba(33, 36, 39, .03), rgba(33, 36, 39, .2)), url("../images/favourites-explore-1.jpg");
@@ -555,32 +555,14 @@ header nav ul li:last-child a {
 #favourites .slide:nth-child(4) .image {
 	background-image: linear-gradient(rgba(33, 36, 39, .03), rgba(33, 36, 39, .2)), url("../images/favourites-explore-4.jpg");
 }
-#favourites .slide:nth-child(5) .image {
-	background-image: linear-gradient(rgba(33, 36, 39, .03), rgba(33, 36, 39, .2)), url("../images/favourites-explore-5.jpg");
-}
-#favourites .slide:nth-child(6) .image {
-	background-image: linear-gradient(rgba(33, 36, 39, .03), rgba(33, 36, 39, .2)), url("../images/favourites-explore-6.jpg");
-}
-#favourites .slide:nth-child(7) .image {
-	background-image: linear-gradient(rgba(33, 36, 39, .03), rgba(33, 36, 39, .2)), url("../images/favourites-explore-7.jpg");
-}
 #favourites .slide:nth-child(2) .image, #favourites .slide:nth-child(2) .title {
-	animation-delay: 6s;
+	animation-delay: 10s;
 }
 #favourites .slide:nth-child(3) .image, #favourites .slide:nth-child(3) .title {
-	animation-delay: 12s;
+	animation-delay: 20s;
 }
 #favourites .slide:nth-child(4) .image, #favourites .slide:nth-child(4) .title {
-	animation-delay: 18s;
-}
-#favourites .slide:nth-child(5) .image, #favourites .slide:nth-child(5) .title {
-	animation-delay: 24s;
-}
-#favourites .slide:nth-child(6) .image, #favourites .slide:nth-child(6) .title {
 	animation-delay: 30s;
-}
-#favourites .slide:nth-child(7) .image, #favourites .slide:nth-child(7) .title {
-	animation-delay: 36s;
 }
 @keyframes imageAnimation { 
 	0% {
